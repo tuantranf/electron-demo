@@ -1,0 +1,15 @@
+{
+  "name": "electron-demo",
+  "version": "1.0.1",
+  "description": "A Password Keychain Built with Electron & Loki.js",
+  "main": "app.js",
+  "keywords": [
+    "toptal",
+    "electron",
+    "loki"
+  ],
+  "dependencies": {
+    "lokijs": "^1.3.9",
+    "uuid": "^2.0.1"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "toptal-electron-loki-demo",
+  "version": "1.0.1",
+  "homepage": "https://github.com/stephanepericat/toptal-electron-loki-demo",
+  "authors": [
+    "Stéphane P. Péricat <stephane@toptal.com>"
+  ],
+  "keywords": [
+    "toptal",
+    "electron",
+    "loki"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.5",
+    "material-design-lite": "~1.0.4"
+  }
+}

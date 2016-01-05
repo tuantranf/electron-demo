@@ -1,0 +1,18 @@
+{
+  "name": "electron-demo",
+  "version": "1.0.1",
+  "description": "A Desktop App Built with Electron & Loki.js",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "electron ./src",
+    "dist": "gulp electron"
+  },
+  "keywords": [
+    "demo",
+    "electron"
+  ],
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-electron": "0.0.9"
+  }
+}

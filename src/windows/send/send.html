@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Send Mail</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="../../bower_components/material-design-lite/material.min.css" rel="stylesheet" />
+    <link href="../../common/app.css" rel="stylesheet" />
+
+    <script src="../../bower_components/material-design-lite/material.min.js"></script>
+    <script src="../../bower_components/angular/angular.min.js"></script>
+
+</head>
+<body>
+
+    <section class="container">
+        <header>
+            <h1>Send Mail</h1>
+        </header>
+
+        <div class="send" ng-controller="SendCtrl as vm">
+            <form name="sendForm" no-validate>
+                <fieldset ng-disabled="!vm.loaded">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="email" id="email" ng-model="vm.formData.email" required />
+                        <label class="mdl-textfield__label" for="email">Email...</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="title" ng-model="vm.formData.title" required />
+                        <label class="mdl-textfield__label" for="title">Title...</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <textarea class="mdl-textfield__input" type="text" rows="4" id="message" ng-model="vm.formData.message" ></textarea>
+                        <label class="mdl-textfield__label" for="message">Message...</label>
+                    </div>
+                    <div class="">
+                        <button toggle-send-view class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">cancel</button>
+                        <button save-password class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" ng-disabled="sendForm.$invalid">send</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+
+    <script src="../../common/utils.js"></script>
+    <script src="./send.view.js"></script>
+    <script>
+        angular
+            .element(document)
+            .ready(function() {
+                angular.bootstrap(document.body, ['SendView']);
+            });
+    </script>
+</body>
+</html>
